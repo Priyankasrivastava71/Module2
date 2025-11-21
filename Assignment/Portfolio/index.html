@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+    <title>Priyanka Shrivastava - Portfolio</title>
+    <meta property="og:title" content="Priyanka Shrivastava - Personal Portfolio" />
+    <meta property="og:description" content="Personal portfolio of Priyanka Shrivastava, showcasing skills and work." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://replit.com/public/images/opengraph.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@replit" />
+    <meta name="twitter:title" content="Priyanka Shrivastava - Portfolio" />
+    <meta name="twitter:description" content="Personal portfolio of Priyanka Shrivastava, showcasing skills and work." />
+    <meta name="twitter:image" content="https://replit.com/public/images/opengraph.png" />
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+    <!-- Link to our plain CSS file -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">Priyanka Shrivastava</div>
+          
+          <!-- Checkbox Hack for Mobile Menu -->
+          <input type="checkbox" id="menu-toggle" class="menu-toggle">
+          <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+
+          <nav class="main-nav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="hero-section">
+        <div class="hero-bg">
+            <!-- We need to reference the asset manually since we aren't using React import -->
+            <img src="/assets/generated_images/soft_abstract_minimal_background_with_geometric_shapes.png" alt="Background" />
+        </div>
+        <div class="container hero-content">
+          <div class="hero-text-wrapper">
+            <h1>Crafting digital <br /><span class="highlight">experiences</span> that matter.</h1>
+            <p>Hi, I'm Priyanka. A passionate creative developer building accessible, pixel-perfect, and performant web experiences.</p>
+            <div class="cta-wrapper">
+              <a href="#contact" class="btn-primary">Contact Me</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about-section">
+        <div class="container">
+          <div class="about-content">
+            <h2>About Me</h2>
+            <div class="prose">
+              <p>I am a dedicated frontend developer with a keen eye for design and a passion for clean, efficient code. With a background in computer science and creative arts, I bridge the gap between engineering and design.</p>
+              <p>My journey began with a curiosity about how things work on the web, which quickly evolved into a professional pursuit. I love solving complex problems and turning abstract ideas into functional, beautiful interfaces.</p>
+              <p>When I'm not coding, you can find me exploring new design trends, contributing to open source, or enjoying a good book with a cup of coffee.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="skills-section">
+        <div class="container">
+          <h2>Skills & Expertise</h2>
+          <div class="skills-grid">
+            <!-- Skill Card 1 -->
+            <div class="skill-card">
+              <h3>HTML & CSS</h3>
+              <p>Semantic markup, Flexbox, Grid, Animations</p>
+              <span class="badge">Advanced</span>
+            </div>
+            <!-- Skill Card 2 -->
+            <div class="skill-card">
+              <h3>JavaScript</h3>
+              <p>ES6+, DOM Manipulation, Async/Await</p>
+              <span class="badge">Advanced</span>
+            </div>
+            <!-- Skill Card 3 -->
+            <div class="skill-card">
+              <h3>React</h3>
+              <p>Hooks, Components, State Management</p>
+              <span class="badge">Intermediate</span>
+            </div>
+            <!-- Skill Card 4 -->
+            <div class="skill-card">
+              <h3>Responsive Design</h3>
+              <p>Mobile-first approach, Media Queries</p>
+              <span class="badge">Advanced</span>
+            </div>
+            <!-- Skill Card 5 -->
+            <div class="skill-card">
+              <h3>UI/UX Principles</h3>
+              <p>Wireframing, Prototyping, Accessibility</p>
+              <span class="badge">Intermediate</span>
+            </div>
+            <!-- Skill Card 6 -->
+            <div class="skill-card">
+              <h3>Git & Version Control</h3>
+              <p>GitHub, Branching, Pull Requests</p>
+              <span class="badge">Intermediate</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <div class="contact-content">
+            <h2>Get In Touch</h2>
+            <p>I'm currently available for freelance work and full-time opportunities. If you have a project that needs some creative touch, I'd love to hear from you.</p>
+            <div class="contact-actions">
+              <a href="mailto:hello@priyanka.dev" class="btn-white">
+                Send an Email
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="copyright">
+            © 2025 Priyanka Shrivastava. All rights reserved.
+          </div>
+          <div class="social-links">
+            <a href="#">GitHub</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Twitter</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
