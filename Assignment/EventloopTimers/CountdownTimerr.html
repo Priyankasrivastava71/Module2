@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Countdown Timer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #timeDisplay {
+      font-size: 48px;
+      margin: 20px 0;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Countdown Timer</h1>
+
+<div id="timeDisplay">0</div>
+
+<button id="stopBtn">Stop Countdown</button>
+
+
+
+</body>
+<script>
+let time = Number(prompt("Enter number of seconds to countdown:"));
+const timeDisplay = document.getElementById("timeDisplay");
+const stopBtn = document.getElementById("stopBtn");
+
+timeDisplay.textContent = time;
+
+const timer = setInterval(() => {
+    timeDisplay.textContent = time;
+    time--;
+    if (time < 0) {
+        clearInterval(timer);
+        timeDisplay.textContent = "Countdown Complete!";
+    }
+}, 1000);
+
+stopBtn.addEventListener("click", () => {
+    clearInterval(timer);
+    timeDisplay.textContent = "Countdown Stopped by User!";
+});
+</script>
+</html>
