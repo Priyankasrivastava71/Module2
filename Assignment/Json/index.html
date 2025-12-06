@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web page</title>
+</head>
+<body>
+    <button onclick="addpara()">Add Paragraph</button>
+    <button onclick="dltpara()">Remove Last Paragraph</button>
+    <div id="container"></div>
+</body>
+<script>
+    function addpara(){
+        const p = document.createElement("p")
+        p.innerText="This is a new paragraph"
+
+        const container = 
+        document.getElementById("container")
+        container.appendChild(p)
+    }
+    function dltpara(){
+        const container = document.getElementById("container")
+        if(container.children.length>0){
+            container.removeChild(container.lastElementChild)
+        }
+    } 
+</script>
+</html>
