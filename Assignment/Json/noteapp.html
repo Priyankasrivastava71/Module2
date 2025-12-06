@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note App</title>
+</head>
+<body>
+    <textarea id="container" placeholder="Write your note here"></textarea>
+    <br>
+    <button onclick="saveNote()">Save Notes</button>
+    <button onclick="loadNote()">Load Notes</button>
+    <button onclick="clearNote()">Clear Notes</button>
+    
+</body>
+<script>
+    const container = document.getElementById("container")
+
+  window.onload = function (){
+    const saveNote = localStorage.getItem("userNote")
+    if(saveNote){
+        container.value = saveNote
+    }
+   }
+    function saveNote(){
+      const note = container.value.trim();
+      if(note ===""){
+      alert("Note cannot be empty!");
+    return
+    }
+    localStorage.getItem("userNote", note)
+    alert("Note saves successfully!");
+}
+  function loadNote(){
+    const savedNote = localStorage.getItem("userNote");
+
+    if(savedNote){
+        container.value= savedNote;
+    }else{
+        alert("NO Saved notes found!");
+    }
+  }
+  function clearNote(){
+    localStorage.removeItem("userNote");
+    container.value="";
+    alert("Notes cleared!")
+  }
+</script>
+</html>
